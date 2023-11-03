@@ -3,10 +3,9 @@
   assert:
     that:
       - application_name is defined
-      - notifications_config_file is defined
-      - graphs_path is defined
-      - xml_file is defined
-      - notifications_config_path is defined
+      - tink_client_id is defined
+      - tink_client_secret is defined
+      - notifications_service_endpoint is defined
 
 - name: Create the graphs directory
   file:
