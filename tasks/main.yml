@@ -7,32 +7,6 @@
       - tink_client_secret is defined
       - notifications_service_endpoint is defined
 
-- name: Create the graphs directory
-  file:
-    path: "{{ hostvars[inventory_hostname].working_directory }}{{ application_name}}/graphs"
-    state: directory
-    mode: 0700
-
-- name: Create the xml directory
-  file:
-    path: "{{ hostvars[inventory_hostname].working_directory }}{{application_name}}/xml"
-    state: directory
-    mode: 0700
-
-- name: Create the config directory
-  file:
-    path: "{{ hostvars[inventory_hostname].working_directory }}{{application_name}}/config"
-    state: directory
-    mode: 0700
-
-- name: Copy notifications config
-  copy:
-    src: "{{ notifications_config_path }}"
-    dest: "{{ hostvars[inventory_hostname].working_directory }}{{application_name}}/notifications_configuration.yml"
-    owner: ubuntu
-    group: ubuntu
-    mode: '0644'
-
 - name: Create app container
   docker_container:
     name: "{{ application_name }}"
