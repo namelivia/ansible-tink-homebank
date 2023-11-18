@@ -17,4 +17,5 @@ roles:
  - `loki_url` Loki endpoint to send logs.
  - `tink_client_id`: Client id for tink.
  - `tink_client_secret`: Client secret for tink.
+ - `tink_callback_uri`: Callback URI for tink.
  - `notifications_service_endpoint`: Endpoint for the notifications service.

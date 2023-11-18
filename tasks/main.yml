@@ -5,6 +5,7 @@
       - application_name is defined
       - tink_client_id is defined
       - tink_client_secret is defined
+      - tink_callback_uri is defined
       - notifications_service_endpoint is defined
 
 - name: Create app container
@@ -21,4 +22,5 @@
     env:
       TINK_CLIENT_ID: "{{ tink_client_id }}"
       TINK_CLIENT_SECRET: "{{ tink_client_secret }}"
+      TINK_CALLBACK_URI: "{{ tink_callback_uri }}"
       NOTIFICATIONS_SERVICE_ENDPOINT: "{{ notifications_service_endpoint }}"
